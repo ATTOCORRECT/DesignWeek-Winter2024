@@ -15,7 +15,7 @@ namespace team28
         public GameObject[] mediumObjects;
         public GameObject[] difficultObjects;
 
-        private int poolID = 0;
+        public int poolID = 0;
 
         // Start is called before the first frame update
         void Awake()
@@ -26,7 +26,11 @@ namespace team28
         // Update is called once per frame
         void Update()
         {
-
+            //this will return the item that we need to create and then add it into the scene
+            if(controller.ActiveItem == null)
+            {
+                controller.ActiveItem = RandomItemToSpawn(ReturnObjectPool());
+            }
         }
 
         //this returns the object pools that we will have

@@ -30,5 +30,9 @@ MonoBehaviour:
   postgameMessages:
   - Test Mssage
   bannerImage: {fileID: 0}
-  developerCredits: []
+  developerCredits:
+  - Marco
+  - Sebastian Mena Andrade
+  - James
+  - Garfield
   licensedWorksCredits: []
