@@ -14,6 +14,7 @@ namespace team28
 
         float angleTolerance = 10;
         bool canScan = true;
+        bool canSpawn = true;
         // Start is called before the first frame update
         Vector2 angularVelocity = Vector2.zero;
 
