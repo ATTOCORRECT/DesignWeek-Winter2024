@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace team28
 {
-    public class ItemPoolManager : MonoBehaviour
+    public class ItemPoolManager : MicrogameEvents
     {
         [Header("Player Controller Script")]
         public ScanPlayerController controller;
@@ -15,7 +15,11 @@ namespace team28
         public GameObject[] mediumObjects;
         public GameObject[] difficultObjects;
 
-        public int poolID = 0;
+        [Header("Grocery Spawn Point")]
+        public Transform spawnPoint;
+
+        [HideInInspector] public int poolID = 0;
+
 
         // Start is called before the first frame update
         void Awake()
@@ -26,11 +30,6 @@ namespace team28
         // Update is called once per frame
         void Update()
         {
-            //this will return the item that we need to create and then add it into the scene
-            if(controller.ActiveItem == null)
-            {
-                controller.ActiveItem = RandomItemToSpawn(ReturnObjectPool());
-            }
         }
 
         //this returns the object pools that we will have
@@ -44,8 +43,9 @@ namespace team28
                     return mediumObjects;
                 case 2:
                     return difficultObjects;
+                default:
+                    return null;
             }
-            return null;
         }
 
         //this will get us a random object from our pool
@@ -55,6 +55,14 @@ namespace team28
             GameObject objectToSpawn = objectPool[randomInt];
             return objectToSpawn;
         }
-    }
 
+        public void SpawnNewItem()
+        {
+            GameObject spawnedItem = RandomItemToSpawn(ReturnObjectPool());
+            //Instantiate(spawnedItem, spawnPoint.position, Quaternion.identity);
+
+            controller.ActiveItem = spawnedItem;
+            controller.GetBarcodeTransform(controller.ActiveItem);
+        }
+    }
 }

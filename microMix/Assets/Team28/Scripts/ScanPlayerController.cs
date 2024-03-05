@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace team28
 {
     public class ScanPlayerController : MicrogameInputEvents
     {
+        [Header ("Item Variables")]
         public GameObject ActiveItem;
         public GameObject ScanLight;
         Transform Barcode;
@@ -15,6 +17,8 @@ namespace team28
         // Start is called before the first frame update
         Vector2 angularVelocity = Vector2.zero;
 
+        [Header("Pool Manager Script")]
+        public ItemPoolManager poolManager;
         void Start()
         {
             Barcode = GetBarcodeTransform(ActiveItem);
@@ -23,15 +27,27 @@ namespace team28
         // Update is called once per frame
         void Update()
         {
-            angularVelocity += stick * 0.01f;
-            angularVelocity *= 0.98f;
-            ActiveItem.transform.Rotate(angularVelocity.y, 0, -angularVelocity.x, Space.World);
-
-            if (canScan && Vector3.Angle(Barcode.up, Vector3.up) < angleTolerance) // barcode visible to scanner
+            if(ActiveItem != null)
             {
-                Invoke("FlashScanner", 0.1f); // flash
-                canScan = false; // disable scanning
+                angularVelocity += stick * 0.01f;
+                angularVelocity *= 0.98f;
+                ActiveItem.transform.Rotate(angularVelocity.y, 0, -angularVelocity.x, Space.World);
+
+                if (canScan && Vector3.Angle(Barcode.up, Vector3.up) < angleTolerance) // barcode visible to scanner
+                {
+                    Invoke("FlashScanner", 0.1f); // flash
+                    canScan = false; // disable scanning
+                    KillTheItem();
+                }
             }
+
+            else
+            {
+                poolManager.SpawnNewItem();
+                Debug.Log(ActiveItem.name);
+            }
+
+
         }
         private void FlashScanner()
         {
@@ -47,6 +63,12 @@ namespace team28
         public Transform GetBarcodeTransform(GameObject ActiveItem)
         {
             return ActiveItem.transform.Find("Barcode");
+        }
+
+        private void KillTheItem()
+        {
+            ActiveItem = null;
+            canScan = true;
         }
     }
 }
