@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 
 namespace team28
@@ -10,11 +12,15 @@ namespace team28
         public GameObject ScanLight;
         Transform Barcode;
 
+        public ItemPoolManager poolManager;
+
         float angleTolerance = 10;
         bool canScan = true;
         // Start is called before the first frame update
         Vector3 targetAngle = Vector3.zero;
         Vector3 dynamicAngle = Vector3.zero;
+
+        bool canSpawn = false;
 
         void Start()
         {
@@ -24,15 +30,23 @@ namespace team28
         // Update is called once per frame
         void FixedUpdate()
         {
-            Vector3 oldDynamicAngle = dynamicAngle;
-    
-            targetAngle += (Vector3)stick * 3f;
-            SetTargetVector(targetAngle);
-            IterateDynamics();
-            dynamicAngle = GetDynamicVector();
+            if(ActiveItem && !canSpawn)
+            {
+                Vector3 oldDynamicAngle = dynamicAngle;
 
-            Vector3 angularVelocity = dynamicAngle - oldDynamicAngle;
-            ActiveItem.transform.Rotate(angularVelocity.y, 0, -angularVelocity.x, Space.World);
+                targetAngle += (Vector3)stick * 3f;
+                SetTargetVector(targetAngle);
+                IterateDynamics();
+                dynamicAngle = GetDynamicVector();
+
+                Vector3 angularVelocity = dynamicAngle - oldDynamicAngle;
+                ActiveItem.transform.Rotate(angularVelocity.y, 0, -angularVelocity.x, Space.World);
+            }
+            else if(!ActiveItem && canSpawn)
+            {
+                canSpawn = false;
+                poolManager.SpawnNewItem();
+            }
         }
 
         void Update()
@@ -41,6 +55,8 @@ namespace team28
             {
                 Invoke("FlashScanner", 0.1f); // flash
                 canScan = false; // disable scanning
+                canSpawn = true;
+                KillItem();
             }
         }
         private void FlashScanner()
@@ -57,6 +73,11 @@ namespace team28
         public Transform GetBarcodeTransform(GameObject ActiveItem)
         {
             return ActiveItem.transform.Find("Barcode");
+        }
+
+        public void KillItem()
+        {
+            ActiveItem = null;
         }
     }
 }

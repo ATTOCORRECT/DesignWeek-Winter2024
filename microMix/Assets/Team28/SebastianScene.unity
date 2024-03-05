@@ -457,6 +457,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   getInputFrom: 0
+  f: 0
+  z: 0
+  r: 0
   ActiveItem: {fileID: 1121493748}
   ScanLight: {fileID: 623935445}
   poolManager: {fileID: 0}
