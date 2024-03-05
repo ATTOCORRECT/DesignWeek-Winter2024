@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace team28
 {
-    public class ScanPlayerController : MicrogameInputEvents
+    public class ScanPlayerController : SecondOrderDynamics
     {
         [Header ("Item Variables")]
         public GameObject ActiveItem;
