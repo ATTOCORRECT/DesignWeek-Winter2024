@@ -12,7 +12,9 @@ namespace team28
         public GameObject ScanLight;
         Transform Barcode;
 
+        [Header("Manager Scripts")]
         public ItemPoolManager poolManager;
+        public ScoreManager scoreManager;
 
         float angleTolerance = 10;
         bool canScan = true;
@@ -51,11 +53,12 @@ namespace team28
 
         void Update()
         {
-            if (canScan && Vector3.Angle(Barcode.up, Vector3.up) < angleTolerance) // barcode visible to scanner
+            if (canScan && Vector3.Angle(Barcode.forward, Vector3.up) < angleTolerance) // barcode visible to scanner
             {
                 Invoke("FlashScanner", 0.1f); // flash
                 canScan = false; // disable scanning
                 canSpawn = true;
+                scoreManager.score += 1;
                 KillItem();
             }
         }
