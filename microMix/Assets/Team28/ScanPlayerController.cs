@@ -27,10 +27,10 @@ namespace team28
             angularVelocity *= 0.98f;
             ActiveItem.transform.Rotate(angularVelocity.y, 0, -angularVelocity.x, Space.World);
 
-            if (canScan && Vector3.Angle(Barcode.up, Vector3.up) < angleTolerance)
+            if (canScan && Vector3.Angle(Barcode.up, Vector3.up) < angleTolerance) // barcode visible to scanner
             {
-                Invoke("FlashScanner", 0.2f);
-                canScan = false;
+                Invoke("FlashScanner", 0.1f); // flash
+                canScan = false; // disable scanning
             }
         }
         private void FlashScanner()
@@ -44,7 +44,7 @@ namespace team28
             ScanLight.GetComponent<Light>().intensity = 10;
         }
 
-        private Transform GetBarcodeTransform(GameObject ActiveItem)
+        public Transform GetBarcodeTransform(GameObject ActiveItem)
         {
             return ActiveItem.transform.Find("Barcode");
         }
