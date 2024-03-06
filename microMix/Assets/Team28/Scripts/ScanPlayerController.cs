@@ -53,14 +53,16 @@ namespace team28
             {
                 if (canScan && Vector3.Angle(Barcode.up, Vector3.up) < angleTolerance) // barcode visible to scanner
                 {
-                    NewItem();
+                    canScan = false;
+                    Invoke("FlashScanner",0.1f);
+                    Invoke("NewItem",0.2f);
                 }
             }
         }
         private void FlashScanner()
         {
             ScanLight.GetComponent<Light>().intensity = 1000;
-            Invoke("DisableScanLight", 0.2f);
+            Invoke("DisableScanLight", 0.1f);
             
         }
 
@@ -76,8 +78,6 @@ namespace team28
 
         public void NewItem()
         {
-            FlashScanner();
-
             scoreManager.score += 1;
 
             //fling
@@ -90,6 +90,8 @@ namespace team28
             ActiveItem = null;
             poolManager.SpawnNewItem();
             Barcode = GetBarcodeTransform(ActiveItem);
+
+            canScan = true;
         }
     }
 }
