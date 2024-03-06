@@ -28,11 +28,14 @@ MonoBehaviour:
   singlePlayerScenePath: Assets/Team28/Scan1pScene.unity
   twoPlayerScenePath: 
   postgameMessages:
-  - Test Mssage
+  - Did you forget the eggs?
+  - Time for a promotion!
+  - What a way to make a living...
+  - Spider-free groceries!
   bannerImage: {fileID: 0}
   developerCredits:
   - Marco
   - Sebastian Mena Andrade
-  - James
+  - James Munoz Sevillano
   - Garfield
   licensedWorksCredits: []
