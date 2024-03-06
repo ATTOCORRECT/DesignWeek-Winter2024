@@ -16,7 +16,7 @@ MonoBehaviour:
   teamNumber: 0
   gameTitle: Grocery
   gameIcon: {fileID: 0}
-  prompt: Scan
+  prompt: Scan!
   singlePlayerScene: {fileID: 102900000, guid: 6ca3439c12d911244b7e887723be314a, type: 3}
   twoPlayerScene: {fileID: 0}
   controls:
@@ -28,11 +28,14 @@ MonoBehaviour:
   singlePlayerScenePath: Assets/Team28/Scan1pScene.unity
   twoPlayerScenePath: 
   postgameMessages:
-  - Test Mssage
+  - Did you forget the eggs?
+  - Time for a promotion!
+  - What a way to make a living...
+  - Spider-free groceries!
   bannerImage: {fileID: 0}
   developerCredits:
   - Marco
   - Sebastian Mena Andrade
-  - James
+  - James Munoz Sevillano
   - Garfield
   licensedWorksCredits: []
