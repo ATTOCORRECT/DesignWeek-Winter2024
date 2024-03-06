@@ -23,5 +23,4 @@ namespace team28
             PoolManager.poolID = Mathf.Clamp(PoolManager.poolID, 0, 2);
         }
     }
-
 }

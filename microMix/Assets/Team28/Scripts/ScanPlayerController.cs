@@ -80,6 +80,7 @@ namespace team28
         {
             scoreManager.score += 1;
 
+            BroadcastMessage("UpdateScreen");
             //fling
             ActiveItem.GetComponent<AproachPoint>().disableTracking = true;
             ActiveItem.GetComponent<Rigidbody>().isKinematic = false;
