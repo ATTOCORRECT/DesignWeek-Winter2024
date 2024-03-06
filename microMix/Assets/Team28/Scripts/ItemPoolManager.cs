@@ -59,7 +59,7 @@ namespace team28
         public void SpawnNewItem()
         {
             GameObject spawnedItem = RandomItemToSpawn(ReturnObjectPool());
-            GameObject newGrocery = Instantiate(spawnedItem, spawnPoint.position, Quaternion.identity);
+            GameObject newGrocery = Instantiate(spawnedItem, spawnPoint.position, Random.rotation);
             controller.ActiveItem = newGrocery;
         }
     }
