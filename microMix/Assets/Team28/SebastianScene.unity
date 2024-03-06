@@ -290,11 +290,9 @@ MonoBehaviour:
   - {fileID: 5228737432865963171, guid: 505a2ad49d2ca0e489779fee90199741, type: 3}
   - {fileID: 547787194389133103, guid: 66ff2aca548ac6d4ebc0734c4d1867ed, type: 3}
   mediumObjects:
-  - {fileID: 5228737432865963171, guid: 505a2ad49d2ca0e489779fee90199741, type: 3}
-  - {fileID: 547787194389133103, guid: 66ff2aca548ac6d4ebc0734c4d1867ed, type: 3}
+  - {fileID: 0}
   difficultObjects:
-  - {fileID: 5228737432865963171, guid: 505a2ad49d2ca0e489779fee90199741, type: 3}
-  - {fileID: 547787194389133103, guid: 66ff2aca548ac6d4ebc0734c4d1867ed, type: 3}
+  - {fileID: 0}
   spawnPoint: {fileID: 1261796651}
   poolID: 0
 --- !u!4 &472936527
@@ -305,13 +303,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472936524}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.54196215, y: -1.3479793, z: -0.32102823}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1261796651}
-  m_Father: {fileID: 914287934}
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &623935445
 GameObject:
@@ -483,7 +480,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 623935448}
-  - {fileID: 472936527}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1160300990
@@ -615,12 +611,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1261796650}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 472936527}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1987323765
 GameObject:
@@ -774,3 +770,5 @@ SceneRoots:
   - {fileID: 1987323768}
   - {fileID: 914287934}
   - {fileID: 1160300994}
+  - {fileID: 472936527}
+  - {fileID: 1261796651}
