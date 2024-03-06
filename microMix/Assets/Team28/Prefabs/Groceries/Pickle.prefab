@@ -14,11 +14,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 57deb636d2b538e458c39a9a3dfdc5ef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.215
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 57deb636d2b538e458c39a9a3dfdc5ef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.033
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 57deb636d2b538e458c39a9a3dfdc5ef, type: 3}
       propertyPath: m_LocalRotation.w
@@ -80,11 +80,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5000355429168532690, guid: 505a2ad49d2ca0e489779fee90199741, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.202
+      value: 0.013
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000355429168532690, guid: 505a2ad49d2ca0e489779fee90199741, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.019
       objectReference: {fileID: 0}
     - target: {fileID: 5228737432865963171, guid: 505a2ad49d2ca0e489779fee90199741, type: 3}
       propertyPath: m_Name
       value: Pickle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304193085154409170, guid: 505a2ad49d2ca0e489779fee90199741, type: 3}
+      propertyPath: m_Height
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304193085154409170, guid: 505a2ad49d2ca0e489779fee90199741, type: 3}
+      propertyPath: m_Radius
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304193085154409170, guid: 505a2ad49d2ca0e489779fee90199741, type: 3}
+      propertyPath: m_Direction
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8147118809744128529, guid: 505a2ad49d2ca0e489779fee90199741, type: 3}
       propertyPath: m_LocalPosition.x
