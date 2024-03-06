@@ -51,7 +51,7 @@ namespace team28
         //this will get us a random object from our pool
         public GameObject RandomItemToSpawn(GameObject[] objectPool)
         {
-            int randomInt = Random.Range(0, objectPool.Length - 1);
+            int randomInt = Random.Range(0, objectPool.Length);
             GameObject objectToSpawn = objectPool[randomInt];
             return objectToSpawn;
         }
@@ -60,9 +60,7 @@ namespace team28
         {
             GameObject spawnedItem = RandomItemToSpawn(ReturnObjectPool());
             GameObject newGrocery = Instantiate(spawnedItem, spawnPoint.position, Quaternion.identity);
-
             controller.ActiveItem = newGrocery;
-            controller.GetBarcodeTransform(controller.ActiveItem);
         }
     }
 }

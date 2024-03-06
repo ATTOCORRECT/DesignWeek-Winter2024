@@ -65,7 +65,6 @@ namespace team28
             if (Vector3.Magnitude(y - x) < 0.01)
             {
                 y = x;
-
             }
         }
 
@@ -76,8 +75,12 @@ namespace team28
 
         public Vector3 GetDynamicVector()
         {
-            
             return y;
+        }
+
+        public void SetDynamicVector(Vector3 initial)
+        {
+            y = initial;
         }
     }
 }

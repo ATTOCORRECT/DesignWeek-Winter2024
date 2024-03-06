@@ -10,7 +10,7 @@ namespace team28
     {
         public GameObject ActiveItem;
         public GameObject ScanLight;
-        Transform Barcode;
+        public Transform Barcode;
 
         [Header("Manager Scripts")]
         public ItemPoolManager poolManager;
@@ -26,13 +26,14 @@ namespace team28
 
         void Start()
         {
+            poolManager.SpawnNewItem();
             Barcode = GetBarcodeTransform(ActiveItem);
         }
 
         // Update is called once per frame
         void FixedUpdate()
         {
-            if(ActiveItem && !canSpawn)
+            if(ActiveItem)
             {
                 Vector3 oldDynamicAngle = dynamicAngle;
 
@@ -44,28 +45,23 @@ namespace team28
                 Vector3 angularVelocity = dynamicAngle - oldDynamicAngle;
                 ActiveItem.transform.Rotate(angularVelocity.y, 0, -angularVelocity.x, Space.World);
             }
-            else if(!ActiveItem && canSpawn)
-            {
-                canSpawn = false;
-                poolManager.SpawnNewItem();
-            }
         }
 
         void Update()
         {
-            if (canScan && Vector3.Angle(Barcode.forward, Vector3.up) < angleTolerance) // barcode visible to scanner
+            if (ActiveItem)
             {
-                Invoke("FlashScanner", 0.1f); // flash
-                canScan = false; // disable scanning
-                canSpawn = true;
-                scoreManager.score += 1;
-                KillItem();
+                if (canScan && Vector3.Angle(Barcode.up, Vector3.up) < angleTolerance) // barcode visible to scanner
+                {
+                    NewItem();
+                }
             }
         }
         private void FlashScanner()
         {
             ScanLight.GetComponent<Light>().intensity = 1000;
-            Invoke("DisableScanLight", 0.3f);
+            Invoke("DisableScanLight", 0.2f);
+            
         }
 
         private void DisableScanLight()
@@ -73,14 +69,27 @@ namespace team28
             ScanLight.GetComponent<Light>().intensity = 10;
         }
 
-        public Transform GetBarcodeTransform(GameObject ActiveItem)
+        public Transform GetBarcodeTransform(GameObject BarcodeItem)
         {
-            return ActiveItem.transform.Find("Barcode");
+            return BarcodeItem.transform.Find("Barcode");
         }
 
-        public void KillItem()
+        public void NewItem()
         {
+            FlashScanner();
+
+            scoreManager.score += 1;
+
+            //fling
+            //ActiveItem.GetComponent<Rigidbody>().AddForce(Vector3.right, ForceMode.Impulse); Phys 3d Not working??
+            //ActiveItem.GetComponent<AproachPoint>().disableTracking = true;
+
+            ActiveItem.GetComponent<AproachPoint>().SetTargetVector(new Vector3(0, 0, -4));
+
+            //reset
             ActiveItem = null;
+            poolManager.SpawnNewItem();
+            Barcode = GetBarcodeTransform(ActiveItem);
         }
     }
 }
