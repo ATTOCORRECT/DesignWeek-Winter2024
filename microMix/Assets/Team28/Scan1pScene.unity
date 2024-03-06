@@ -287,11 +287,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 914287933}
   easyObjects:
-  - {fileID: 5228737432865963171, guid: 505a2ad49d2ca0e489779fee90199741, type: 3}
+  - {fileID: 1202933448544624696, guid: 8dbba60c08de72c419c12a75ca8452c5, type: 3}
   - {fileID: 547787194389133103, guid: 66ff2aca548ac6d4ebc0734c4d1867ed, type: 3}
+  - {fileID: 244371776308781634, guid: cfb30a8e53ca5924493744db4003eb67, type: 3}
   mediumObjects:
   - {fileID: 5228737432865963171, guid: 505a2ad49d2ca0e489779fee90199741, type: 3}
-  - {fileID: 547787194389133103, guid: 66ff2aca548ac6d4ebc0734c4d1867ed, type: 3}
+  - {fileID: 913556483412244639, guid: c34ed9c614031c4498710061cc72a17b, type: 3}
   difficultObjects:
   - {fileID: 5228737432865963171, guid: 505a2ad49d2ca0e489779fee90199741, type: 3}
   - {fileID: 547787194389133103, guid: 66ff2aca548ac6d4ebc0734c4d1867ed, type: 3}
