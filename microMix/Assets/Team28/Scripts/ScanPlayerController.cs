@@ -16,7 +16,7 @@ namespace team28
         public ItemPoolManager poolManager;
         public ScoreManager scoreManager;
 
-        float angleTolerance = 10;
+        float angleTolerance = 20;
         bool canScan = true;
         // Start is called before the first frame update
         Vector3 targetAngle = Vector3.zero;
@@ -94,6 +94,11 @@ namespace team28
             poolManager.SpawnNewItem();
             Barcode = GetBarcodeTransform(ActiveItem);
 
+            Invoke("EnableScanning", 0.2f);
+        }
+
+        private void EnableScanning()
+        {
             canScan = true;
         }
     }

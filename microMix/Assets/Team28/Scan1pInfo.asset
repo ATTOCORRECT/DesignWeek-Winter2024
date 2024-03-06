@@ -16,7 +16,7 @@ MonoBehaviour:
   teamNumber: 0
   gameTitle: Grocery
   gameIcon: {fileID: 0}
-  prompt: Scan
+  prompt: Scan!
   singlePlayerScene: {fileID: 102900000, guid: 6ca3439c12d911244b7e887723be314a, type: 3}
   twoPlayerScene: {fileID: 0}
   controls:
