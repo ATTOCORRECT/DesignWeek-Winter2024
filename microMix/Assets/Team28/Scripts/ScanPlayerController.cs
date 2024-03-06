@@ -61,14 +61,14 @@ namespace team28
         }
         private void FlashScanner()
         {
-            ScanLight.GetComponent<Light>().intensity = 1000;
+            ScanLight.GetComponent<Light>().intensity = 50;
             Invoke("DisableScanLight", 0.1f);
             
         }
 
         private void DisableScanLight()
         {
-            ScanLight.GetComponent<Light>().intensity = 10;
+            ScanLight.GetComponent<Light>().intensity = 0;
         }
 
         public Transform GetBarcodeTransform(GameObject BarcodeItem)
@@ -80,9 +80,10 @@ namespace team28
         {
             scoreManager.score += 1;
 
-            BroadcastMessage("UpdateScreen");
+            //BroadcastMessage("UpdateScreen");
+            BroadcastMessage("PauseHandTracking");
             //fling
-            ActiveItem.GetComponent<AproachPoint>().disableTracking = true;
+            ActiveItem.GetComponent<ApproachPoint>().disableTracking = true;
             ActiveItem.GetComponent<Rigidbody>().isKinematic = false;
             ActiveItem.GetComponent<Rigidbody>().useGravity = true;
             ActiveItem.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-1, 1), 3 + Random.Range(-1,1), -1 + Random.Range(-1, 0)), ForceMode.Impulse);
