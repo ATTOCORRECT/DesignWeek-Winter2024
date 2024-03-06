@@ -81,10 +81,12 @@ namespace team28
             scoreManager.score += 1;
 
             //fling
-            //ActiveItem.GetComponent<Rigidbody>().AddForce(Vector3.right, ForceMode.Impulse); Phys 3d Not working??
-            //ActiveItem.GetComponent<AproachPoint>().disableTracking = true;
+            
+            ActiveItem.GetComponent<AproachPoint>().disableTracking = true;
+            ActiveItem.GetComponent<Rigidbody>().useGravity = true;
+            ActiveItem.GetComponent<Rigidbody>().AddForce(new Vector3(0,3, -3), ForceMode.Impulse);
 
-            ActiveItem.GetComponent<AproachPoint>().SetTargetVector(new Vector3(0, 0, -4));
+            //ActiveItem.GetComponent<AproachPoint>().SetTargetVector(new Vector3(0, 0, -4));
 
             //reset
             ActiveItem = null;
