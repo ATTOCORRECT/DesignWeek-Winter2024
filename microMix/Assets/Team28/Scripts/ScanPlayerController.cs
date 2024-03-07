@@ -22,17 +22,20 @@ namespace team28
         public AudioClip clip;
 
         float angleTolerance = 20;
-        bool canScan = true;
+        bool canScan = false;
         // Start is called before the first frame update
         Vector3 targetAngle = Vector3.zero;
         Vector3 dynamicAngle = Vector3.zero;
-
-        bool canSpawn = false;
 
         void Start()
         {
             poolManager.SpawnNewItem();
             Barcode = GetBarcodeTransform(ActiveItem);
+        }
+
+        protected override void OnGameStart()
+        {
+            canScan = true;
         }
 
         // Update is called once per frame

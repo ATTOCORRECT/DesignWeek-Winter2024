@@ -487,6 +487,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8361016390026390798, guid: e9533f3ba0dc0dc4095e0c6dff0db0b8, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 9067228665275177366, guid: e9533f3ba0dc0dc4095e0c6dff0db0b8, type: 3}
       propertyPath: m_Text
       value: :]
