@@ -27,7 +27,7 @@ MonoBehaviour:
     joiner: 0
     secondary: 0
   rightPlayerAltControls: []
-  singlePlayerScenePath: Assets/Team28/Scan1pScene.unity
+  singlePlayerScenePath: Assets/Team28/Grocery1pScene.unity
   twoPlayerScenePath: 
   postgameMessages:
   - Did you forget the eggs?

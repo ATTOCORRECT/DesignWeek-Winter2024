@@ -65,8 +65,11 @@ namespace team28
         }
         private void FlashScanner()
         {
+            //update display
+            BroadcastMessage("UpdateDisplayScore");
+
             ScanLight.GetComponent<Light>().intensity = 50;
-            ScanLight.GetComponent<LineRenderer>().startColor = new Color(232,78,79,255);
+            ScanLight.GetComponent<LineRenderer>().startColor = new Color(0.909804f, 0.3058824f, 0.3098039f, 1f);
             source.PlayOneShot(clip);
             Invoke("DisableScanLight", 0.1f);
             
@@ -75,7 +78,7 @@ namespace team28
         private void DisableScanLight()
         {
             ScanLight.GetComponent<Light>().intensity = 2;
-            ScanLight.GetComponent<LineRenderer>().startColor = new Color(232, 78, 79, 100);
+            ScanLight.GetComponent<LineRenderer>().startColor = new Color(0.909804f, 0.3058824f, 0.3098039f, 0.3773584f);
         }
 
         public Transform GetBarcodeTransform(GameObject BarcodeItem)
