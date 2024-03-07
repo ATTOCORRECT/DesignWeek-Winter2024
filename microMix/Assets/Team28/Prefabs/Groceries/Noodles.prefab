@@ -110,6 +110,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Noodles
       objectReference: {fileID: 0}
+    - target: {fileID: 7304193085154409170, guid: 505a2ad49d2ca0e489779fee90199741, type: 3}
+      propertyPath: m_Height
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304193085154409170, guid: 505a2ad49d2ca0e489779fee90199741, type: 3}
+      propertyPath: m_Radius
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304193085154409170, guid: 505a2ad49d2ca0e489779fee90199741, type: 3}
+      propertyPath: m_Direction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8147118809744128529, guid: 505a2ad49d2ca0e489779fee90199741, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

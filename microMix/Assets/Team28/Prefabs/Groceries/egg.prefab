@@ -120,11 +120,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7304193085154409170, guid: 505a2ad49d2ca0e489779fee90199741, type: 3}
       propertyPath: m_Height
-      value: 0.44118127
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7304193085154409170, guid: 505a2ad49d2ca0e489779fee90199741, type: 3}
       propertyPath: m_Radius
-      value: 0.22059064
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 7304193085154409170, guid: 505a2ad49d2ca0e489779fee90199741, type: 3}
       propertyPath: m_Center.z

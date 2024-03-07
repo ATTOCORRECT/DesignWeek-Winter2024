@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Scan1pInfo
   m_EditorClassIdentifier: 
   includeInRandomizer: 1
-  teamNumber: 0
+  teamNumber: 28
   gameTitle: Grocery
   gameIcon: {fileID: 0}
-  prompt: Scan!
+  announcerText: Scan!
+  announcerAudioFile: Scan -RX10MDc_253-01
+  _announcerAudio: {fileID: 8300000, guid: 50ffce3676ef9d04890ded63f841deea, type: 3}
   singlePlayerScene: {fileID: 102900000, guid: 6ca3439c12d911244b7e887723be314a, type: 3}
   twoPlayerScene: {fileID: 0}
   controls:
