@@ -9,10 +9,11 @@ namespace team28
         // Start is called before the first frame update
         Vector3 aproachPoint = Vector3.zero;
         public bool disableTracking = false;
+        public string playerName = "Player";
         ScanPlayerController controller;
         void Start()
         {
-            controller = GameObject.Find("Player").GetComponent<ScanPlayerController>();
+            controller = GameObject.Find(playerName).GetComponent<ScanPlayerController>();
         }
 
         // Update is called once per frame

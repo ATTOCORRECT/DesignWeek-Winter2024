@@ -10,6 +10,7 @@ namespace team28
     {
         public GameObject ActiveItem;
         public GameObject ScanLight;
+
         public Transform Barcode;
 
         [Header("Manager Scripts")]

@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace team28
 {
+    
     public class ItemPoolManager : MicrogameEvents
     {
         [Header("Player Controller Script")]
@@ -20,6 +21,7 @@ namespace team28
 
         [HideInInspector] public int poolID = 0;
 
+        public GameObject ManipulatorPos;
 
         // Start is called before the first frame update
         void Awake()
@@ -60,6 +62,7 @@ namespace team28
         {
             GameObject spawnedItem = RandomItemToSpawn(ReturnObjectPool());
             GameObject newGrocery = Instantiate(spawnedItem, spawnPoint.position, Random.rotation, controller.transform);
+            newGrocery.GetComponent<ApproachPoint>().aproachPoint = ManipulatorPos.transform.position;
             controller.ActiveItem = newGrocery;
         }
     }

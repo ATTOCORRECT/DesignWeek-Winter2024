@@ -20,6 +20,7 @@ namespace team28
         // Update is called once per frame
         void FixedUpdate()
         {
+            SetTargetVector(aproachPoint);
             if (!disableTracking)
             {
                 IterateDynamics();

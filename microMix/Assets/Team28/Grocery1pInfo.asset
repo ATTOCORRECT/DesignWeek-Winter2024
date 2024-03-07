@@ -20,7 +20,7 @@ MonoBehaviour:
   announcerAudioFile: Scan -RX10MDc_253-01
   _announcerAudio: {fileID: 8300000, guid: 50ffce3676ef9d04890ded63f841deea, type: 3}
   singlePlayerScene: {fileID: 102900000, guid: 6ca3439c12d911244b7e887723be314a, type: 3}
-  twoPlayerScene: {fileID: 0}
+  twoPlayerScene: {fileID: 102900000, guid: 4bb54e675bae19c4fbbda6df42c26237, type: 3}
   controls:
   - label: Rotate Item
     primary: 124
@@ -28,7 +28,7 @@ MonoBehaviour:
     secondary: 0
   rightPlayerAltControls: []
   singlePlayerScenePath: Assets/Team28/Grocery1pScene.unity
-  twoPlayerScenePath: 
+  twoPlayerScenePath: Assets/Team28/Grocery2pScene.unity
   postgameMessages:
   - Did you forget the eggs?
   - Time for a promotion!
