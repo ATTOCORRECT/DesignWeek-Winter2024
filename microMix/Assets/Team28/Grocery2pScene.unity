@@ -778,12 +778,20 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4855430327828526966, guid: e9533f3ba0dc0dc4095e0c6dff0db0b8, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b72388cff3273fe4c8299e124bb1cdb8, type: 3}
+    - target: {fileID: 4855430327828526966, guid: e9533f3ba0dc0dc4095e0c6dff0db0b8, type: 3}
       propertyPath: getInputFrom
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5564980716954040410, guid: e9533f3ba0dc0dc4095e0c6dff0db0b8, type: 3}
       propertyPath: m_Name
       value: Player 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361016390026390798, guid: e9533f3ba0dc0dc4095e0c6dff0db0b8, type: 3}
+      propertyPath: m_Volume
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 9067228665275177366, guid: e9533f3ba0dc0dc4095e0c6dff0db0b8, type: 3}
       propertyPath: m_Text
@@ -845,6 +853,10 @@ PrefabInstance:
     - target: {fileID: 5564980716954040410, guid: e9533f3ba0dc0dc4095e0c6dff0db0b8, type: 3}
       propertyPath: m_Name
       value: Player 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361016390026390798, guid: e9533f3ba0dc0dc4095e0c6dff0db0b8, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 9067228665275177366, guid: e9533f3ba0dc0dc4095e0c6dff0db0b8, type: 3}
       propertyPath: m_Text

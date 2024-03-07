@@ -35,7 +35,7 @@ namespace team28
 
         public void UpdateDisplayScore()
         {
-            score = scoreManager.score;
+            score = scoreManager.score + 1;
 
             text.text = score.ToString();
 
