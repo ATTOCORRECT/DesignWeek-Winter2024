@@ -21,7 +21,7 @@ namespace team28
             if (!disableTracking)
             {
                 Vector3 barcodePosition = controller.Barcode.position;
-                Vector3 target = new Vector3(barcodePosition.x, barcodePosition.y + 0.5f, barcodePosition.z);
+                Vector3 target = new Vector3(barcodePosition.x, barcodePosition.y + 0.8f, barcodePosition.z);
                 SetTargetVector(target);
 
             }

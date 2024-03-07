@@ -22,7 +22,7 @@ MonoBehaviour:
   singlePlayerScene: {fileID: 102900000, guid: 6ca3439c12d911244b7e887723be314a, type: 3}
   twoPlayerScene: {fileID: 0}
   controls:
-  - label: Rotate
+  - label: Rotate Item
     primary: 124
     joiner: 0
     secondary: 0
