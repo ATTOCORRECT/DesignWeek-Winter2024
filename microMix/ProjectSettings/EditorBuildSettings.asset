@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Examples/Team99/Tooth Rush/Scenes/Tooth Rush - 2P.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Team28/Scan1pScene.unity
+    path: Assets/Team28/Grocery1pScene.unity
     guid: 6ca3439c12d911244b7e887723be314a
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 28bfde271760c454b943706b4892c800, type: 2}
