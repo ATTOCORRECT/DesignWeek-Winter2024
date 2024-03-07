@@ -16,7 +16,7 @@ MonoBehaviour:
   teamNumber: 28
   gameTitle: Grocery
   gameIcon: {fileID: 21300000, guid: 046d5ed2251d7af4ba875832485aa4cc, type: 3}
-  announcerText: Scan!
+  announcerText: Scan
   announcerAudioFile: Scan -RX10MDc_253-01
   _announcerAudio: {fileID: 8300000, guid: 50ffce3676ef9d04890ded63f841deea, type: 3}
   singlePlayerScene: {fileID: 102900000, guid: 6ca3439c12d911244b7e887723be314a, type: 3}
