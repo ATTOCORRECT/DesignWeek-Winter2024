@@ -16,6 +16,10 @@ namespace team28
         public ItemPoolManager poolManager;
         public ScoreManager scoreManager;
 
+        [Header("Audio")]
+        public AudioSource source;
+        public AudioClip clip;
+
         float angleTolerance = 20;
         bool canScan = true;
         // Start is called before the first frame update
@@ -62,6 +66,7 @@ namespace team28
         private void FlashScanner()
         {
             ScanLight.GetComponent<Light>().intensity = 50;
+            source.PlayOneShot(clip);
             Invoke("DisableScanLight", 0.1f);
             
         }
