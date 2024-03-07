@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d24fbde2c24ab1544bd81b52842e8ec5, type: 3}
-  m_Name: Grocery1pInfo
+  m_Name: GroceryInfo
   m_EditorClassIdentifier: 
   includeInRandomizer: 1
   teamNumber: 28
@@ -34,7 +34,7 @@ MonoBehaviour:
   - Time for a promotion!
   - What a way to make a living...
   - Spider-free groceries!
-  bannerImage: {fileID: 0}
+  bannerImage: {fileID: 21300000, guid: 18217ca0cbecb1e418d8e041db14c57f, type: 3}
   developerCredits:
   - Marco
   - Sebastian Mena Andrade
