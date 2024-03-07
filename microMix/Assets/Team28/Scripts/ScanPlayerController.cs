@@ -51,7 +51,7 @@ namespace team28
         {
             if (ActiveItem)
             {
-                if (canScan && Vector3.Angle(Barcode.up, Vector3.up) < angleTolerance) // barcode visible to scanner
+                if (canScan && true) // barcode visible to scanner
                 {
                     canScan = false;
                     Invoke("FlashScanner",0.1f);
