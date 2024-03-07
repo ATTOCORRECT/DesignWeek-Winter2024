@@ -31,7 +31,6 @@ namespace team28
 
         public void PauseHandTracking()
         {
-            Debug.Log("TRIGGER");
             disableTracking = true;
             Invoke("EnableTracking", 0.3f);
         }
