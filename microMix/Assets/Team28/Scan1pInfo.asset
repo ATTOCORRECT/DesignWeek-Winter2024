@@ -15,7 +15,7 @@ MonoBehaviour:
   includeInRandomizer: 1
   teamNumber: 28
   gameTitle: Grocery
-  gameIcon: {fileID: 0}
+  gameIcon: {fileID: 21300000, guid: 046d5ed2251d7af4ba875832485aa4cc, type: 3}
   announcerText: Scan!
   announcerAudioFile: Scan -RX10MDc_253-01
   _announcerAudio: {fileID: 8300000, guid: 50ffce3676ef9d04890ded63f841deea, type: 3}

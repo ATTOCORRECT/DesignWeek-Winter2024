@@ -51,7 +51,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: b039452faa876ed48909c02d14247493, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 41d302c735f11314ca8b303f1fb1763b, type: 2}
+      objectReference: {fileID: 2100000, guid: 65c4866ba0de87f42975965dc77f3670, type: 2}
     - target: {fileID: 919132149155446097, guid: b039452faa876ed48909c02d14247493, type: 3}
       propertyPath: m_Name
       value: Tomato Model
